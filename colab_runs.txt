@@ -1,1 +1,1 @@
-python src/official.py --tag no_flip_color
+python src/official.py --tag balanced
