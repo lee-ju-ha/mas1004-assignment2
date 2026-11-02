@@ -25,6 +25,10 @@ from torchvision import transforms as T
 BATCH_SIZE = 64
 
 
+def _bottom_right_quadrant(image):
+    return image.crop((image.width // 2, image.height // 2, image.width, image.height))
+
+
 def train_transform():
     """A function that turns one training photo (a PIL image) into a 224 x 224 one.
 
@@ -33,7 +37,8 @@ def train_transform():
     photo is drawn, so the same photo looks different every time.
     """
     return T.Compose([
-        T.RandomResizedCrop(224, scale=(0.35, 1.0)),
+        T.Lambda(_bottom_right_quadrant),
+        T.Resize((224, 224)),
         T.RandomHorizontalFlip(),
         T.ColorJitter(0.2, 0.2, 0.2),
     ])
