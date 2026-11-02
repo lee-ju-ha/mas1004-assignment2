@@ -1,1 +1,1 @@
-python src/official.py --tag bottom_right_zoom
+python src/official.py --tag grayscale
