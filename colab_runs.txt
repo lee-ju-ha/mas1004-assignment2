@@ -1,1 +1,1 @@
-python src/curate.py mistakes results/baseline_seed0/model.onnx
+python src/official.py --tag bottom_right_zoom
