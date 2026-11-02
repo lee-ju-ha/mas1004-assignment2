@@ -1,1 +1,1 @@
-python src/official.py --tag grayscale
+python src/official.py --tag no_flip_color
