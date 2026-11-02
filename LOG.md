@@ -28,3 +28,10 @@ End the log with your plan for what to try next.
 - validation: 0.4045 (baseline seed 0: 0.4984)
 - what it means: 모델이 (일반적으로 위쪽에 존재하는) 도로표지판을 통해 도시를 판단할 것이라고 생각하였기 때문에 예상에 알맞은 결과가 나왔다.
 - next: 아직 정하지 않음
+
+## 2026-11-03 grayscale (Track A)
+- changed: 오른쪽 아래 확대를 빼고, 학습 사진을 흑백으로 변환
+- why: 상대적으로 색채가 화려한 도시가 있기 때문에 도시마다의 차이를 줄여서 비교해보고 싶었다.
+- validation: 0.4274 (baseline seed 0: 0.4984; bottom_right_zoom: 0.4045)
+- what it means: 도시의 색채가 모델의 판단에 영향을 미친다는 것을 알게 되었다.
+- next: 사진을 좌우반전하고 싶다.
