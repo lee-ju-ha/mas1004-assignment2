@@ -35,3 +35,10 @@ End the log with your plan for what to try next.
 - validation: 0.4274 (baseline seed 0: 0.4984; bottom_right_zoom: 0.4045)
 - what it means: 도시의 색채가 모델의 판단에 영향을 미친다는 것을 알게 되었다.
 - next: 사진을 좌우반전하고 싶다.
+
+## 2026-11-03 balanced (Track A)
+- changed: 모든 사진은 유지하고, 도시별 샘플링 비중을 같게 조정
+- why: 부산이랑 도쿄, 서울의 사진 수가 2배 이상 차이 나기 때문에 모델 학습에 영향을 미칠 것이라 생각하였다.
+- validation: 0.5092 (baseline seed 0: 0.4984); Busan 0.4561 (baseline seed 0: 0.3748)
+- what it means: 부산 data 수가 적어서 부산 점수 또한 낮게 나온다고 생각했고, 도시별 비중을 동일하게 한 결과 유의미하게 점수가 올라서 각 도시의 사진 수가 모델 학습에 영향을 미친다는 사실을 알게 되었다.
+- next: 아직 정하지 않음
