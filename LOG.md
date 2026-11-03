@@ -42,3 +42,10 @@ End the log with your plan for what to try next.
 - validation: 0.5092 (baseline seed 0: 0.4984); Busan 0.4561 (baseline seed 0: 0.3748)
 - what it means: 부산 data 수가 적어서 부산 점수 또한 낮게 나온다고 생각했고, 도시별 비중을 동일하게 한 결과 유의미하게 점수가 올라서 각 도시의 사진 수가 모델 학습에 영향을 미친다는 사실을 알게 되었다.
 - next: 아직 정하지 않음
+
+## 2026-11-03 always_flip (Track A)
+- changed: 학습 사진에 무작위 좌우반전 대신 항상 좌우반전을 적용; 도시별 샘플링 균형 조정은 사용하지 않음
+- why: 도로에서 나타나는 도시별 특징인 (서울, 부산, 타이베이 우측통행 / 도쿄, 오사카 좌측통행) 차량의 통행 방향이 모델 학습에 미치는 영향을 알아보고 싶다.
+- validation: 0.4856 (baseline seed 0: 0.4984)
+- what it means: baseline보다 낮은 점수가 나온 것을 통해 좌우반전이 모델의 학습에 유의미한 도움을 주지 않았다고 생각한다.
+- next: 실내 사진을 제외하고 학습을 진행하고 싶어.
