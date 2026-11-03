@@ -1,1 +1,1 @@
-python src/official.py --tag always_flip_balanced
+python src/official.py --tag always_flip
