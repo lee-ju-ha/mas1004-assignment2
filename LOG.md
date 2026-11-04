@@ -49,3 +49,10 @@ End the log with your plan for what to try next.
 - validation: 0.4856 (baseline seed 0: 0.4984)
 - what it means: baseline보다 낮은 점수가 나온 것을 통해 좌우반전이 모델의 학습에 유의미한 도움을 주지 않았다고 생각한다.
 - next: 실내 사진을 제외하고 학습을 진행하고 싶어.
+
+## 2026-11-04 balanced_always_flip (Track A)
+- changed: 도시별 균형 샘플링과 항상 좌우반전을 함께 적용
+- why: 시도했던 실험 중에 점수가 높게 나왔기 때문이다.
+- validation: 0.4958 (balanced: 0.5092; always_flip: 0.4856)
+- what it means: 둘의 시너지가 생겨 점수 상승을 기대했으나 높게 나오지 않았다.
+- next: 아직 정하지 않음
