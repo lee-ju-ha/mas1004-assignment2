@@ -75,5 +75,5 @@ End the log with your plan for what to try next.
 - changed: 물건이나 음식만 나온 사진, 실내 사진, 박물관 사진 35장을 제외하고 balanced 샘플링 유지
 - why: 사진에서 각 도시들의 특징을 발견할 수 없어 제외했다.
 - validation: 0.5040 (balanced seed 0: 0.5092)
-- what it means: baseline보다는 올랐지만 balanced보다는 낮기 때문에 balanced를 적용하여 다시 학습시키고 싶다.
-- next: 35장을 제외하고 도시마다 같은 확률로 뽑히도록 가중치를 조정 (balanced)해서 다시 학습할 것이다.
+- what it means: 사진을 선별하였기 때문에 balanced보다 높을 것으로 예상했는데 그러지 않아서 다른 방식으로도 학습을 진행해보아야겠다.
+- next: 사진을 선명하게 해서 모델 학습을 진행할 것이다.
