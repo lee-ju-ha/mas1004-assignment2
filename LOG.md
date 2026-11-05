@@ -77,3 +77,10 @@ End the log with your plan for what to try next.
 - validation: 0.5040 (balanced seed 0: 0.5092)
 - what it means: 사진을 선별하였기 때문에 balanced보다 높을 것으로 예상했는데 그러지 않아서 다른 방식으로도 학습을 진행해보아야겠다.
 - next: 사진을 선명하게 해서 모델 학습을 진행할 것이다.
+
+## 2026-11-06 sharpen (Track A)
+- changed: 학습 사진 전체에 선명도 보정 적용; 모든 사진을 사용하고 도시별 균형 샘플링은 적용하지 않음
+- why: 선명도 보정을 적용해 모델 학습을 진행하고 싶었다.
+- validation: 0.4611 (balanced seed 0: 0.5092; baseline seed 0: 0.4984)
+- what it means: 선명도 보정도 모델 학습에 유의미한 영향을 주지 않은 것을 알 수 있다.
+- next: 아직 정하지 않음
