@@ -63,3 +63,10 @@ End the log with your plan for what to try next.
 - validation: 0.5039 (balanced: 0.5092; baseline: 0.4984)
 - what it means: baseline보다 높은 점수가 나왔기 때문에 모델 학습에 도움을 준 것으로 확인할 수 있다.
 - next: 아직 정하지 않음
+
+## 2026-11-05 balanced_seed1 (Track A)
+- changed: balanced 설정을 그대로 두고 seed 1로 추가 학습
+- why: balanced 점수가 가장 높아서 seed에 따른 차이가 있는지 확인하고 싶었다.
+- validation: seed 1 0.5042; seed 0 0.5092 (baseline seed 1: 0.4957; seed 0: 0.4984)
+- what it means: balanced 점수가 가장 높아서 seed에 따른 차이가 있나 확인해본건데 0, 1에서 비슷한 점수가 나온 것을 통해 실행의 무작위성으로 점수가 높게 나온 것이 아니라 설정에 의한 것임을 알 수 있었다.
+- next: 7단계로 넘어갈 것이다.
