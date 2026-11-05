@@ -54,7 +54,7 @@ def sample_weights(cities, paths):
 
 
 def make_optimizer(model):
-    return torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=0.1)
+    return torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=0.05)
 
 
 def make_scheduler(optimizer, total_steps):

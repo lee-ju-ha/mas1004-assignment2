@@ -1,1 +1,1 @@
-python src/official.py --tag balanced_wd01
+python src/official.py --tag balanced_seed1 --seed 1
