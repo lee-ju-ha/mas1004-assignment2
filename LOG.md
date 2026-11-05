@@ -70,3 +70,10 @@ End the log with your plan for what to try next.
 - validation: seed 1 0.5042; seed 0 0.5092 (baseline seed 1: 0.4957; seed 0: 0.4984)
 - what it means: balanced 점수가 가장 높아서 seed에 따른 차이가 있나 확인해본건데 0, 1에서 비슷한 점수가 나온 것을 통해 실행의 무작위성으로 점수가 높게 나온 것이 아니라 설정에 의한 것임을 알 수 있었다.
 - next: 7단계로 넘어갈 것이다.
+
+## 2026-11-05 curated (Track A)
+- changed: 물건이나 음식만 나온 사진, 실내 사진, 박물관 사진 35장을 제외하고 balanced 샘플링 유지
+- why: 사진에서 각 도시들의 특징을 발견할 수 없어 제외했다.
+- validation: 0.5040 (balanced seed 0: 0.5092)
+- what it means: baseline보다는 올랐지만 balanced보다는 낮기 때문에 balanced를 적용하여 다시 학습시키고 싶다.
+- next: 35장을 제외하고 도시마다 같은 확률로 뽑히도록 가중치를 조정 (balanced)해서 다시 학습할 것이다.
