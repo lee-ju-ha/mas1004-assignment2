@@ -18,6 +18,8 @@ This is the recipe the starter code came with. It is the baseline on the
 leaderboard.
 """
 
+import collections
+
 import torch
 import torch.nn.functional as F
 from torchvision import transforms as T
@@ -36,7 +38,6 @@ def train_transform():
         T.RandomResizedCrop(224, scale=(0.35, 1.0)),
         T.RandomHorizontalFlip(),
         T.ColorJitter(0.2, 0.2, 0.2),
-        T.RandomAdjustSharpness(2.0, p=1.0),
     ])
 
 
@@ -48,17 +49,18 @@ def sample_weights(cities, paths):
     is drawn twice as often as one with weight 1. Return None to go through
     the selection in a new random order each time, every photo once per round.
     """
-    return None
+    counts = collections.Counter(cities)
+    return [1.0 / counts[city] for city in cities]
 
 
 def make_optimizer(model):
-    return torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=0.05)
+    return torch.optim.AdamW(model.parameters(), lr=2e-4, weight_decay=0.05)
 
 
 def make_scheduler(optimizer, total_steps):
     """Stepped once after every training step. total_steps is BUDGET // BATCH_SIZE."""
     return torch.optim.lr_scheduler.OneCycleLR(
-        optimizer, max_lr=3e-4, total_steps=total_steps, pct_start=0.15)
+        optimizer, max_lr=2e-4, total_steps=total_steps, pct_start=0.15)
 
 
 def mix(images, labels):
