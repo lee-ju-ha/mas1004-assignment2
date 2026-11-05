@@ -56,3 +56,10 @@ End the log with your plan for what to try next.
 - validation: 0.4958 (balanced: 0.5092; always_flip: 0.4856)
 - what it means: 둘의 시너지가 생겨 점수 상승을 기대했으나 높게 나오지 않았다.
 - next: 아직 정하지 않음
+
+## 2026-11-05 balanced_wd01 (Track A)
+- changed: balanced 샘플링을 유지하고 weight decay를 0.05에서 0.1로 변경
+- why: 리더보드에서 다른 학생들의 weight decay 0.1 실험을 봤고, 아직 시도하지 않은 설정이라 점수가 높았던 balanced와 결합해 점수가 오르는지 확인하고 싶었다.
+- validation: 0.5039 (balanced: 0.5092; baseline: 0.4984)
+- what it means: baseline보다 높은 점수가 나왔기 때문에 모델 학습에 도움을 준 것으로 확인할 수 있다.
+- next: 아직 정하지 않음
