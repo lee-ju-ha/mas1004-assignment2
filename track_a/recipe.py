@@ -36,7 +36,7 @@ def train_transform():
     """
     return T.Compose([
         T.RandomResizedCrop(224, scale=(0.35, 1.0)),
-        T.RandomHorizontalFlip(p=1.0),
+        T.RandomHorizontalFlip(),
         T.ColorJitter(0.2, 0.2, 0.2),
     ])
 
@@ -54,7 +54,7 @@ def sample_weights(cities, paths):
 
 
 def make_optimizer(model):
-    return torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=0.05)
+    return torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=0.1)
 
 
 def make_scheduler(optimizer, total_steps):
