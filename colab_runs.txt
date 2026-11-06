@@ -1,2 +1,2 @@
-python src/train_b.py --tag b2 --balance --submit
+python src/train_b.py --tag b3_extra_busan_osaka --folders data/starter/train data/mine --balance --submit
 python src/check_submission.py --no-val
