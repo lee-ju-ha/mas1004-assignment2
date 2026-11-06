@@ -98,3 +98,10 @@ End the log with your plan for what to try next.
 - validation: 0.5001 (balanced batch size 64 seed 0: 0.5092; seed 1: 0.5042)
 - what it means: batch size 또한 모델 학습에 유의미한 성과를 내지는 못하였다는 것을 알 수 있다.
 - next: 이제 Track A를 마무리하고 Track B로 넘어갈 것이다.
+
+## 2026-11-06 b1 (Track B)
+- changed: 기본 Track B ResNet18 모델, 224px, 4 epochs
+- why: Track B로 넘어가 기본 모델의 성능을 확인하고 싶었다.
+- validation: 0.4827 (seoul 0.5778, busan 0.3540, tokyo 0.5952, osaka 0.3529, taipei 0.5337)
+- what it means: 너무 높지 않아서 여러 항목을 수정해보면서 점수를 높일 수 있을 것 같다.
+- next: 부산과 오사카의 점수를 높이고 싶다.
