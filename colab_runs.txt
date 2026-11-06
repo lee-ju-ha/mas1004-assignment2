@@ -1,1 +1,1 @@
-python src/official.py --tag balanced_lr2e4
+python src/official.py --tag balanced_bs32
