@@ -91,3 +91,10 @@ End the log with your plan for what to try next.
 - validation: 0.5028 (balanced seed 0, learning rate 3e-4: 0.5092; balanced seed 1: 0.5042; baseline seed 0: 0.4984)
 - what it means: learning rate보다는 balanced에 따른 점수 향상일 것이라 생각해서 다른 설정도 조절해서 점수 차이를 확인해야 할 것 같다.
 - next: learning rate는 기본값 3e-4로 두고 batch size만 32로 줄여 점수 차이를 확인할 것이다.
+
+## 2026-11-06 balanced_bs32 (Track A)
+- changed: balanced 샘플링과 기본 learning rate 3e-4를 유지하고 batch size를 32로 변경
+- why: learning rate는 기본값 3e-4로 두고 batch size만 32로 줄여 점수 차이를 확인하고 싶었다.
+- validation: 0.5001 (balanced batch size 64 seed 0: 0.5092; seed 1: 0.5042)
+- what it means: batch size 또한 모델 학습에 유의미한 성과를 내지는 못하였다는 것을 알 수 있다.
+- next: 이제 Track A를 마무리하고 Track B로 넘어갈 것이다.
