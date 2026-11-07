@@ -105,3 +105,10 @@ End the log with your plan for what to try next.
 - validation: 0.4827 (seoul 0.5778, busan 0.3540, tokyo 0.5952, osaka 0.3529, taipei 0.5337)
 - what it means: 너무 높지 않아서 여러 항목을 수정해보면서 점수를 높일 수 있을 것 같다.
 - next: 부산과 오사카의 점수를 높이고 싶다.
+
+## 2026-11-07 b3_extra_busan_osaka (Track B)
+- changed: balanced 샘플링을 적용하고 직접 촬영한 부산 사진 9장과 오사카 사진 6장을 추가해 ResNet18을 224px, 4 epochs로 학습
+- why: balanced는 track A에서 가장 점수가 높은 설정이라 적용하였고, 부산과 오사카 data가 적었기 때문에 직접 찍은 사진을 추가하였다.
+- validation: 0.5049 (b2 balanced, starter photos only: 0.5039)
+- what it means: 0.001 높기 때문에 사진 추가에 큰 의미를 부여하지는 않을 거지만 그래도 balanced에 다른 설정을 적용하여 점수가 올라간 것이 처음이라 주목할 필요가 있다.
+- next: 아직은 정하지 않음
