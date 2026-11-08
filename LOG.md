@@ -119,3 +119,10 @@ End the log with your plan for what to try next.
 - validation: 0.5704 (b3 ResNet18 224px, balanced, 추가 사진: 0.5049)
 - what it means: 모델과 사진 크기를 바꾼게 점수 향상에 큰 도움을 준 것 같다.
 - next: 마지막 실험에서 다른 설정은 전부 동일하게 유지하고 epochs만 8로 올려줘.
+
+## 2026-11-08 b5_mobile384_epochs8 (Track B)
+- changed: b4 설정을 유지하고 epochs를 4에서 8로 변경
+- why: 마지막 실험에서 다른 설정은 전부 동일하게 유지하고 epochs만 8로 올리고 싶었다.
+- validation: 0.5777 (b4, 4 epochs: 0.5704)
+- what it means: b5 모델은 서울, 도쿄, 타이베이의 분류 성능이 높은 모델이라고 생각된다. 지금은 부산과 오사카 점수를 높이는 것이 목표이기 때문에 epoch는 다시 4로 설정하는 것이 좋을 것 같다.
+- next: 아직 정하지 않음
