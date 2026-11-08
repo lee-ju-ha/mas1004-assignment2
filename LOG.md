@@ -112,3 +112,10 @@ End the log with your plan for what to try next.
 - validation: 0.5049 (b2 balanced, starter photos only: 0.5039)
 - what it means: 0.001 높기 때문에 사진 추가에 큰 의미를 부여하지는 않을 거지만 그래도 balanced에 다른 설정을 적용하여 점수가 올라간 것이 처음이라 주목할 필요가 있다.
 - next: 아직은 정하지 않음
+
+## 2026-11-08 b4_mobilenet384_extra_busan_osaka (Track B)
+- changed: MobileNetV3-Large, 384px 입력, balanced 샘플링, 부산 사진 9장과 오사카 사진 6장 추가; 4 epochs
+- why: 모델은 MobileNetV3-Large를 사용하고 입력 크기를 384px로 높여, 추가 사진과 balanced 샘플링을 적용한 실험을 진행하고 싶었다.
+- validation: 0.5704 (b3 ResNet18 224px, balanced, 추가 사진: 0.5049)
+- what it means: 모델과 사진 크기를 바꾼게 점수 향상에 큰 도움을 준 것 같다.
+- next: 마지막 실험에서 다른 설정은 전부 동일하게 유지하고 epochs만 8로 올려줘.
