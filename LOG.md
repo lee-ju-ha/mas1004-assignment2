@@ -126,3 +126,10 @@ End the log with your plan for what to try next.
 - validation: 0.5777 (b4, 4 epochs: 0.5704)
 - what it means: b5 모델은 서울, 도쿄, 타이베이의 분류 성능이 높은 모델이라고 생각된다. 지금은 부산과 오사카 점수를 높이는 것이 목표이기 때문에 epoch는 다시 4로 설정하는 것이 좋을 것 같다.
 - next: 아직 정하지 않음
+
+## 2026-11-09 b6_mobile448_extra_busan_osaka (Track B)
+- changed: b4 설정에서 입력 크기만 384px에서 448px로 변경
+- why: b4와 동일한 설정에서 사진 크기만 448px로 바꾸어 실험하고 싶었다.
+- validation: 0.5630 (b4, 384px: 0.5704)
+- what it means: 이번 실험은 별로 효과적이지 않다고 생각한다.
+- next: 사진 크기를 384px로 되돌리고 epochs를 6으로 올려 실험한다.
