@@ -133,3 +133,10 @@ End the log with your plan for what to try next.
 - validation: 0.5630 (b4, 384px: 0.5704)
 - what it means: 이번 실험은 별로 효과적이지 않다고 생각한다.
 - next: 사진 크기를 384px로 되돌리고 epochs를 6으로 올려 실험한다.
+
+## 2026-11-10 b7_mobile384_epochs6 (Track B)
+- changed: b4 설정에서 epochs를 4에서 6으로 변경
+- why: 사진 크기를 384px로 되돌리고 epochs를 6으로 올려 실험하고 싶었다.
+- validation: 0.5653 (b4, 4 epochs: 0.5704; b5, 8 epochs: 0.5777)
+- what it means: 서울과 도쿄 점수의 경우 epoch 수 증가에 따라 상승하는 경향을 보이고, 부산과 타이베이의 경우 감소하는 경향을 보인다. 이는 data 수가 많은 도시는 상대적으로 다양한 이미지를 학습할 수 있기 때문이라고 생각한다.
+- next: 사진 크기를 320px로 줄이고 epoch를 8로 늘려줘.

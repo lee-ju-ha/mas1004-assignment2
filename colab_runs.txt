@@ -1,2 +1,2 @@
-python src/train_b.py --tag b7_mobile384_epochs6 --model mobilenet_v3_large --size 384 --epochs 6 --folders data/starter/train data/mine --balance --submit
+python src/train_b.py --tag b8_mobile320_epochs8 --model mobilenet_v3_large --size 320 --epochs 8 --folders data/starter/train data/mine --balance --submit
 python src/check_submission.py --no-val
